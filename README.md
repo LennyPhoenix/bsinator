@@ -28,8 +28,8 @@ dependencies:
 - prompt: "Please select a terminal file browser:"
   packages: [nnn, ranger]
   requires: 1
-pre: echo "Beginning neovim module installation..."
-post: echo "Neovim module installation finished!"
+pre-hook: echo "Beginning neovim module installation..."
+post-hook: echo "Neovim module installation finished!"
 ```
 
 A module structure will look something like this:
@@ -51,8 +51,8 @@ The user will be asked to select from the given dependencies, the pre hook will 
 - `name`: **Required** - String, given to the user in the module list.
 - `description`: String, the longer text description given to the user before dependencies are listed. Not required, but recommended.
 - `dependencies`: List, dependency groups to process.
-- `pre`: String, pre-installation hook executed in shell before dependencies are installed.
-- `post`: String, post-installation hook executed in shell after dependencies are installed.
+- `pre-hook`: String, pre-installation hook executed in shell before dependencies are installed.
+- `post-hook`: String, post-installation hook executed in shell after dependencies are installed.
 
 ### Dependency Groups
 
