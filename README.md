@@ -1,4 +1,6 @@
-# The one bootstrap program to rule them all.
+# Bootstrapinator
+
+> The one bootstrap program to rule them all.
 
 Bootstrapinator aims to fulfil three primary functions:
 
@@ -59,7 +61,7 @@ A dependency group may contain any of the following keys:
 - `packages`: **Required** - List, must contain strings corresponding to package names.
 - `prompt`: String, outputted to the user before they choose from the package list. Default: `""`
 - `requires`: Int, the minimum number of packages the user must choose for the group, `-1` indicates all must to be installed. Default: `-1`
-- `asdeps`: Bool, whether to install the packages with the `--asdeps` flag.
+- `asdeps`: Bool, whether to install the packages with the `--asdeps` flag. Default: `False`
 
 ## License
 
