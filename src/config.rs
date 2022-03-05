@@ -29,3 +29,8 @@ pub fn traverse_config_directory(config_path: PathBuf) -> io::Result<Vec<PathBuf
     }
     Ok(modules)
 }
+
+pub fn read_config(config_path: &PathBuf) -> io::Result<String> {
+    let contents = fs::read_to_string(config_path)?;
+    Ok(contents)
+}
